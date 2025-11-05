@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../app/generated/prisma"
 }
 
@@ -52,4 +52,3 @@ model Booking {
   user    User              @relation(fields: [userId], references: [id])
   service BarbershopService @relation(fields: [serviceId], references: [id])
 }
-
