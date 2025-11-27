@@ -47,9 +47,6 @@ export default function HomeContent({ barbershops, popularBarbershops }) {
         </h2>
         <BarbershopList items={popularBarbershops} />
       </div>
-
-      {/* Rodapé */}
-      <Footer />
     </div>
   );
 }
