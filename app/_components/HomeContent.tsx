@@ -5,7 +5,6 @@ import BarbershopList from "./ui/BarbershopList";
 import Footer from "./ui/Footer";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import Image from "next/image";
 import { SearchIcon } from "lucide-react";
 
 export default function HomeContent({ barbershops, popularBarbershops }) {
