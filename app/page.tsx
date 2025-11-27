@@ -1,5 +1,16 @@
-import Image from "next/image";
+import { db } from "./_lib/prisma";
+import HomeContent from "./_components/HomeContent";
 
-export default function Home() {
-  return <h1 className="mb-5 bg-red-200 text-red-500">home page</h1>;
+export default async function Home() {
+  const barbershops = await db.barbershop.findMany({});
+  const popularBarbershops = await db.barbershop.findMany({
+    orderBy: { name: "desc" },
+  });
+
+  return (
+    <HomeContent
+      barbershops={barbershops}
+      popularBarbershops={popularBarbershops}
+    />
+  );
 }
